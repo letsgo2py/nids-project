@@ -2,7 +2,7 @@
 
 A Python-based **Network Intrusion Detection System** that combines **signature-based rule detection** and **ML anomaly detection (Isolation Forest)** to identify malicious network traffic from real-world packet flow data.
 
-> Built using the [CICIDS 2017 dataset](https://www.unb.ca/cic/datasets/ids-2017.html) from Kaggle — Monday (benign) and Friday (attack) traffic captures.
+> Built using the [CICIDS 2017 dataset](https://www.kaggle.com/datasets/bertvankeulen/cicids-2017?resource=download) from Kaggle — Monday (benign) and Friday (attack) traffic captures.
 
 ---
 
@@ -64,7 +64,7 @@ NIDS/
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/nids-project.git
+git clone https://github.com/letsgo2py/nids-project.git
 cd nids-project
 ```
 
@@ -74,7 +74,7 @@ pip install -r requirements.txt
 ```
 
 ### 3. Add the dataset
-Download the CICIDS 2017 dataset from [Kaggle](https://www.kaggle.com/datasets/cicdataset/cicids2017) and place the files:
+Download the CICIDS 2017 dataset from [Kaggle](https://www.kaggle.com/datasets/bertvankeulen/cicids-2017) and place the files:
 ```
 data/monday.csv    ← Monday WorkingHours.pcap_ISCX.csv
 data/friday.csv    ← Friday WorkingHours.pcap_ISCX.csv
@@ -114,20 +114,19 @@ bash run_nids.sh
 
 ```json
 {
-  "generated_at": "20260619_142301",
   "rule_based_alerts": {
-    "total": 1843,
+    "total": 104945,
     "breakdown": {
-      "SYN Flood Detected": 912,
-      "Possible Port Scan": 541,
-      "Large Outbound Transfer": 287,
-      "High Packet Rate (Possible Flood)": 103
+      "Possible Port Scan": 97341,
+      "Large Outbound Transfer": 5456,
+      "High Packet Rate (Possible Flood)": 2072,
+      "SYN Flood Detected": 76
     }
   },
   "ml_anomaly_detection": {
-    "total_flows_analysed": 191033,
-    "anomalies_detected": 3820,
-    "anomaly_rate_percent": 2.0
+    "total_flows_analysed": 547557,
+    "anomalies_detected": 58137,
+    "anomaly_rate_percent": 10.62
   }
 }
 ```
@@ -152,15 +151,3 @@ This project demonstrates hands-on experience with:
 - **Threat analysis** — implementation of detection logic for known attack patterns (DDoS, Port Scan, Exfiltration)
 
 ---
-
-## 📄 Dataset Reference
-
-> Iman Sharafaldin, Arash Habibi Lashkari, and Ali A. Ghorbani, "Toward Generating a New Intrusion Detection Dataset and Intrusion Traffic Characterization", ICISSP 2018.
-
----
-
-## 👤 Author
-
-**Your Name**
-- GitHub: [@your-username](https://github.com/your-username)
-- LinkedIn: [linkedin.com/in/your-profile](https://linkedin.com/in/your-profile)
