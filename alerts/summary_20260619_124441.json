@@ -1,0 +1,17 @@
+{
+  "generated_at": "20260619_124441",
+  "rule_based_alerts": {
+    "total": 104945,
+    "breakdown": {
+      "Possible Port Scan": 97341,
+      "Large Outbound Transfer": 5456,
+      "High Packet Rate (Possible Flood)": 2072,
+      "SYN Flood Detected": 76
+    }
+  },
+  "ml_anomaly_detection": {
+    "total_flows_analysed": 547557,
+    "anomalies_detected": 58137,
+    "anomaly_rate_percent": 10.62
+  }
+}
